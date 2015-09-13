@@ -11,6 +11,7 @@
   "dependencies": {},
   "devDependencies": {
     "angular-animate": "^1.4.5",
+    "angular-cookies": "^1.4.5",
     "angular-messages": "^1.4.5",
     "angular-mocks": "^1.4.5",
     "angular-resource": "^1.4.5",
