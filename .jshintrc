@@ -1,0 +1,18 @@
+{
+	"globals": {
+		"console": false,
+		"require": false,
+		"$": false,
+		"define": false,
+		"requirejs": false
+	},
+	"curly": true,
+	"forin": true,
+	"latedef": true,
+	"undef": true,
+	"unused": "vars",
+	"esnext": true,
+	"browser": true,
+	"jasmine": true,
+	"jquery": true
+}

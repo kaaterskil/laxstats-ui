@@ -1,0 +1,17 @@
+dev:
+- clean
+- copy:images
+- copy:libs
+- browserify:app
+- compass:dev
+- uglify:app
+- processhtml:dev
+- serve
+
+serve:
+- connect:livereload
+- watch
+
+default:
+- portPick
+- dev

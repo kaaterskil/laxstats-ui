@@ -1,0 +1,10 @@
+dist/
+hooks/
+node_modules
+plugins/
+target/
+.sass-cache
+.settings
+.project
+.tern-project
+npm-debug.log
