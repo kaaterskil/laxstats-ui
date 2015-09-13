@@ -34,4 +34,4 @@ For development on this project, run the following:
 1. `npm install`
 2. `npm start`
 
-All the of the tasks will run and the process will wait for additional changes before re-running. The node server will listen on http://localhost:9100.
+All the of the tasks will run and the process will wait for additional changes before re-running. The node server will listen on http://localhost:9001.

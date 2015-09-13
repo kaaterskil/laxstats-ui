@@ -5,12 +5,12 @@ module.exports = function(grunt) {
     require('load-grunt-config')(grunt, {
         data: {
             banner: '/**\n' + 
-                ' * Laxstats Client\n' +
+                ' * Laxstats UI\n' +
                 ' * Version: <%= package.version %>\n' +
                 ' * Compiled: <%= grunt.template.today("isoUtcDateTime") %>\n' + 
                 ' */\n',
             config: {
-                appName: 'laxstats-client',
+                appName: 'laxstats-ui',
                 appFileName: 'laxstats',
                 source: 'www/js',
                 lib: 'www/lib/ionic/js',
