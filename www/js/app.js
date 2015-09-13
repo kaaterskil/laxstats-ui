@@ -1,7 +1,7 @@
 import {APP_NAME} from './core/constants';
-import {contextResolverFactory} from './core/context-resolver';
 
 require('./main/main');
+require('./core/core');
 var angular = require('angular');
 
 function appConfig($stateProvider, $urlRouterProvider){
@@ -27,7 +27,11 @@ function appRun($ionicPlatform) {
     });
 }
 
-export default angular.module(APP_NAME, ['ionic', 'ui.router', 'laxstats.main'])
-	.factory('ContextResolver', contextResolverFactory)
+export default angular.module(APP_NAME, [
+        'ionic', 
+        'ui.router',
+        'laxstats.core',
+        'laxstats.main'
+    ])
 	.config(appConfig)
     .run(appRun);
