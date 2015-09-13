@@ -1,4 +1,5 @@
-import {ROUTES} from '../../core/routes';
+import {API} from '../../core/routes';
+
 var angular = require('angular');
 
 class FieldService {
@@ -8,7 +9,7 @@ class FieldService {
 	}
 	
 	getUrl(id) {
-		let url = this.ContextResolver.baseUrl + ROUTES.main.fields;
+		let url = this.ContextResolver.baseUrl + API.main.fields;
 		if(id) {
 			url += '/' + id;
 		}
