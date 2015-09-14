@@ -2,6 +2,8 @@ import {APP_NAME} from './core/constants';
 
 require('./main/main');
 require('./core/core');
+require('./admin/admin');
+
 var angular = require('angular');
 
 function appConfig($stateProvider, $urlRouterProvider){
@@ -31,7 +33,8 @@ export default angular.module(APP_NAME, [
         'ionic', 
         'ui.router',
         'laxstats.core',
-        'laxstats.main'
+        'laxstats.main',
+        'laxstats.admin'
     ])
 	.config(appConfig)
     .run(appRun);
