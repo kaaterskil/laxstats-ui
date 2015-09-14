@@ -82,15 +82,12 @@ export function authFactory($rootScope, $http, $cookies, $location, $timeout, Se
         var api = ContextResolver.baseUrl + API.main.logout;
         
         function logoutSuccess(){
-            console.log('logout succeeded');
-
             auth.authenticated = false;
             SessionService.destroySession();
             $location.path(auth.homePath);
         }
         
         function logoutFailure(response){
-            console.log(response);
             auth.authenticated = false;
             SessionService.destroySession();
         }
