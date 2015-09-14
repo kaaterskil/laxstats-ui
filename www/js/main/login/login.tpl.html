@@ -1,0 +1,31 @@
+<ion-view view-title="Login">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" 
+                class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    
+    <ion-content>
+        <form class="list" role="form" ng-submit="login.login()">
+            <label class="item item-input">
+                <span class="input-label">Username</span> 
+                <input type="text" 
+                       id="username"
+                       ng-model="login.credentials.username" 
+                       required />
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span> 
+                <input type="password" 
+                       autocomplete="off"
+                       id="password" 
+                       ng-model="login.credentials.password" 
+                       required />
+            </label>
+            <div class="padding">
+                <button type='submit' 
+                        class="button button-block button-positive">Login</button>
+            </div>
+        </form>
+        <div class="" ng-show="ctrl.error">{{ctrl.message}}</div>
+    </ion-content>
+</ion-view>

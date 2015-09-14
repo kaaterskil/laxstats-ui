@@ -25,6 +25,15 @@ function mainConfig($stateProvider) {
                     controller: 'FieldController'
                 }
             }
+        })
+        .state('main.login', {
+            url: '/login',
+            views: {
+                'menuContent': {
+                    template: require('./login/login.tpl.html'),
+                    controller: 'LoginController as login',
+                }
+            }
         });
 }
 
@@ -43,7 +52,10 @@ class HomeController {
 }
 
 require('angular')
-	.module('laxstats.main', [require('./fields').name])
+	.module('laxstats.main', [
+	    require('./fields').name,
+	    require('./login').name
+	])
     .config(mainConfig)
     .controller('MainController', MainController)
     .controller('HomeController', HomeController);
