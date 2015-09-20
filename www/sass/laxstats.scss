@@ -2,3 +2,18 @@ body {
 	width: auto;
 	padding: 0;
 }
+
+// Override ionic style to wrap errors
+form .item {
+	flex-wrap: wrap;
+}
+
+.lax-error-container {
+	margin: 0;
+	padding: 0;
+	
+	.lax-error {
+		color: #f00;
+		font-size: 12px;
+	}
+}

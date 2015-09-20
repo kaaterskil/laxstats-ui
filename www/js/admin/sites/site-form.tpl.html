@@ -1,0 +1,86 @@
+<ion-view view-title="{{ctrl.model.name || 'New Site'}}">
+    <ion-content>
+        <form
+            name="form"
+            class="list"
+            role="form">
+            <input
+                type="hidden"
+                id="id"
+                ng-model="model.id">
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input
+                    type="text"
+                    id="name"
+                    ng-model="ctrl.model.name"
+                    placeholder="New Site"
+                    required>
+                <lax-error errors="ctrl.errors.name"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Surface</span>
+                <select
+                    id="surface"
+                    ng-model="ctrl.model.surface"
+                    ng-options="opt.value as opt.label for opt in ctrl.surfaces"></select>
+                <lax-error errors="ctrl.errors.surface"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Style</span>
+                <select
+                    id="surface"
+                    ng-model="ctrl.model.style"
+                    ng-options="opt.value as opt.label for opt in ctrl.styles"></select>
+                <lax-error errors="ctrl.errors.style"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Address</span>
+                <input
+                    type="text"
+                    id="address-1"
+                    ng-model="ctrl.model.address1">
+                <lax-error errors="ctrl.errors.address1"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">City</span>
+                <input
+                    type="text"
+                    id="city"
+                    ng-model="ctrl.model.city"
+                    ng-required>
+                <lax-error errors="ctrl.errors.city"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">State</span>
+                <select
+                    id="surface"
+                    ng-model="ctrl.model.region"
+                    ng-options="opt.value as opt.label for opt in ctrl.regions" 
+                    ng-required></select>
+                <lax-error errors="ctrl.errors.region"></lax-error>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">ZIP Code</span>
+                <input
+                    type="text"
+                    id="postal-code"
+                    ng-model="ctrl.model.postalCode">
+                <lax-error errors="ctrl.errors.postalCode"></lax-error>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Directions</span>
+                <textarea id="directions" 
+                          ng-model="ctrl.model.directions"></textarea>
+                <lax-error errors="ctrl.errors.directions"></lax-error>
+            </label>
+            <div class="padding">
+                <button type="button"
+                        class="button button-block button-positive"
+                        ng-click="ctrl.saveOrUpdate()">
+                    {{ctrl.buttonText()}}
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
