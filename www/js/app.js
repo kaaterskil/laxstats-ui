@@ -1,10 +1,11 @@
 import {APP_NAME} from './core/constants';
 
+var angular = require('angular');
+require('angular-resource');
+
 require('./main/main');
 require('./core/core');
 require('./admin/admin');
-
-var angular = require('angular');
 
 function appConfig($stateProvider, $urlRouterProvider){
 	'ngInject';
@@ -29,9 +30,11 @@ function appRun($ionicPlatform) {
     });
 }
 
-export default angular.module(APP_NAME, [
+export default angular
+    .module(APP_NAME, [
         'ionic', 
         'ui.router',
+        'ngResource',
         'laxstats.core',
         'laxstats.main',
         'laxstats.admin'
