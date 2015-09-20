@@ -1,4 +1,4 @@
-export default class CsrfProvider {
+class CsrfProvider {
     constructor() {
         this.headerName = 'X-XSRF-TOKEN';
         this.cookieName = 'XSRF-TOKEN';
@@ -36,3 +36,5 @@ export default class CsrfProvider {
         return new CsrfProvider();
     }
 }
+
+export default CsrfProvider;
