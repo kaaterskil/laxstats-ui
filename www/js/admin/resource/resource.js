@@ -23,11 +23,11 @@ class Resource {
     }
     
     query(params, success, error) {
-        return this.resourceClass.query(params, success, error).$promise;
+        return this.resourceClass.query(params, success, error);
     }
     
     get(params, success, error) {
-        return this.resourceClass.get(params, success, error).$promise;
+        return this.resourceClass.get(params, success, error);
     }
     
     create(data, params, success, error) {

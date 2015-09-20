@@ -1,7 +1,8 @@
 require('../admin');
-require('angular-ui-router');
 
 var angular = require('angular');
+require('angular-ui-router');
+require('angular-resource');
 
 describe('Resource', function () {
     'use strict';
@@ -36,10 +37,9 @@ describe('Resource', function () {
         var url = mockContext + mockApi, collection;
         
         $httpBackend.expectGET(url).respond(mockCollection);
-        mockResource.query()
-            .then(function (response) {
-                collection = response;
-            });
+        mockResource.query().$promise.then(function (response) {
+            collection = response;
+        });
         $httpBackend.flush();
         
         expect(collection.length).toEqual(mockCollection.length);
@@ -50,7 +50,7 @@ describe('Resource', function () {
         var url = mockContext + mockApi + '/' + mockEntity.id, result;
         
         $httpBackend.expectGET(url).respond(mockEntity);
-        mockResource.get({id: 123}).then(function (response) {
+        mockResource.get({id: 123}).$promise.then(function (response) {
             result = response;
         });
         $httpBackend.flush();
@@ -78,7 +78,7 @@ describe('Resource', function () {
             var url = mockContext + mockApi + '/' + mockEntity.id;
             
             $httpBackend.expectGET(url).respond(mockEntity);
-            mockResource.get({id: 123}).then(function (response) {
+            mockResource.get({id: 123}).$promise.then(function (response) {
                 instance = response;
             });
             $httpBackend.flush();
