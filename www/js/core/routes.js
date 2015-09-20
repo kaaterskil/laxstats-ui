@@ -5,7 +5,8 @@ export const ROUTES = {
 		logout: 'main/logout'
 	},
 	admin: {
-	    home: 'admin/home'
+	    home: 'admin/home',
+	    sites: 'admin/sites'
 	}
 };
 
@@ -18,5 +19,7 @@ export const API = {
         fields: 'api/sites'
     },
     admin: {
+        sites: 'api/sites',
+        violations: 'api/violations'
     }
 };

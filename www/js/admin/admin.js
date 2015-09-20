@@ -1,5 +1,7 @@
 var angular = require('angular');
 
+import Resource from './resource/resource';
+
 function adminConfig($stateProvider) {
     'ngInject';
     
@@ -13,9 +15,18 @@ function adminConfig($stateProvider) {
         .state('admin.home', {
             url: '/home',
             views: {
-                'menuContent': {
+                'menu-content': {
                     template: require('./home.tpl.html'),
                     controller: 'AdminHomeController as ctrl'
+                }
+            }
+        })
+        .state('admin.violations', {
+            url: '/violations',
+            views: {
+                'menu-content': {
+                    template: require('./violations/violations.tpl.html'),
+                    controller: 'ViolationsController as ctrl'
                 }
             }
         });
@@ -43,7 +54,12 @@ class AdminHomeController {
 }
 
 export default angular
-    .module('laxstats.admin', [])
+    .module('laxstats.admin', [
+        'ngResource',
+        require('./sites').name,
+        require('./violations').name
+    ])
     .config(adminConfig)
     .controller('AdminController', AdminController)
-    .controller('AdminHomeController', AdminHomeController);
+    .controller('AdminHomeController', AdminHomeController)
+    .service('Resource', Resource);
