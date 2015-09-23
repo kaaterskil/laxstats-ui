@@ -20,15 +20,6 @@ function adminConfig($stateProvider) {
                     controller: 'AdminHomeController as ctrl'
                 }
             }
-        })
-        .state('admin.violations', {
-            url: '/violations',
-            views: {
-                'menu-content': {
-                    template: require('./violations/violations.tpl.html'),
-                    controller: 'ViolationsController as ctrl'
-                }
-            }
         });
 }
 
