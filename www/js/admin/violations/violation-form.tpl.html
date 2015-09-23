@@ -1,0 +1,62 @@
+<ion-view view-title="{{ctrl.model.name || 'New Violation'}}">
+    <ion-content>
+        <form
+            name="violation-form"
+            class="list"
+            role="form">
+            
+            <input
+                type="hidden"
+                id="id"
+                ng-model="ctrl.model.id">
+                
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input
+                    type="text"
+                    id="name"
+                    maxlength="50"
+                    ng-model="ctrl.model.name">
+                <lax-error errors="ctrl.errors.name"></lax-error>
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Description</span>
+                <textarea
+                    id="description"
+                    ng-model="ctrl.model.description"></textarea>
+                <lax-error errors="ctrl.errors.description"></lax-error>
+            </label>
+            
+            <ion-toggle
+                ng-model="ctrl.model.releasable"
+                toggle-class="toggle-calm">Releasable</ion-toggle>
+            <lax-error errors="ctrl.errors.releasable"></lax-error>
+            
+            <label class="item item-input">
+                <span class="input-label">Category</span>
+                <select
+                    id="category"
+                    ng-model="ctrl.model.category"
+                    ng-options="opt.value as opt.label for opt in ctrl.categories"></select>
+                <lax-error errors="ctrl.errors.category"></lax-error>
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Penalty</span>
+                <select
+                    id="category"
+                    ng-model="ctrl.model.penaltyLength"
+                    ng-options="opt.value as opt.label for opt in ctrl.penalties"></select>
+                <lax-error errors="ctrl.errors.penaltyLength"></lax-error>
+            </label>
+            
+            <div class="padding">
+                <button
+                    type="button"
+                    class="button button-block button-positive"
+                    ng-click="ctrl.saveOrUpdate()">{{ctrl.btnText()}}</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
