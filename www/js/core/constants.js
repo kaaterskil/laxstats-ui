@@ -80,3 +80,19 @@ export const SITE_STYLES = [
     {label: 'Practice', value: 'PRACTICE'},
     {label: 'Unknown', value: 'UNKNOWN'}
 ];
+
+// Violation categories
+export const VIOLATION_CATEGORIES = [
+    {label: 'Personal', value: 'PERSONAL_FOUL'},
+    {label: 'Technical', value: 'TECHNICAL_FOUL'}
+];
+
+// Violation penalty
+export const VIOLATION_PENALTIES = [
+    {label: '0:30', value: 'THIRTY_SECONDS'},
+    {label: '1:00', value: 'ONE_MINUTE'},
+    {label: '2:00', value: 'TWO_MINUTES'},
+    {label: '3:00', value: 'THREE_MINUTES'},
+    {label: 'Award of ball', value: 'AWARD'},
+    {label: 'Ejection', value: 'EJECTION'}
+];
