@@ -36,7 +36,7 @@ class SiteFormController {
         if (this.model.id && this.model.id.length > 0) {
             this.Site.update({id: this.model.id}, this.model, this.onSuccess, this.onError);
         } else {
-            var site = new this.Site(this.model);
+            let site = new this.Site(this.model);
             site.$save(this.onSuccess, this.onError);
         }
     }

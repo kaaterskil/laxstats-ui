@@ -18,7 +18,7 @@ function siteFactory($resource, ContextResolver) {
     return $resource(url, paramDefaults, actions);
 }
 
-class SiteController {
+class SitesController {
     constructor($state, sites) {
         'ngInject';       
         angular.extend(this, {$state, sites});
@@ -59,7 +59,7 @@ function siteConfig($stateProvider){
             cache: false,
             url: '',
             template: require('./sites.tpl.html'),
-            controller: 'SiteController as ctrl',
+            controller: 'SitesController as ctrl',
             resolve: {
                 sites: (Site) => { 
                     return Site.query();
@@ -91,6 +91,6 @@ function siteConfig($stateProvider){
 export default angular
     .module('laxstats.admin.sites', [])
     .config(siteConfig)
-    .controller('SiteController', SiteController)
+    .controller('SitesController', SitesController)
     .controller('SiteFormController', SiteFormController)
     .factory('Site', siteFactory);

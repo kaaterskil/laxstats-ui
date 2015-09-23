@@ -4,10 +4,12 @@
             name="form"
             class="list"
             role="form">
+            
             <input
                 type="hidden"
                 id="id"
-                ng-model="model.id">
+                ng-model="ctrl.model.id">
+                
             <label class="item item-input">
                 <span class="input-label">Name</span>
                 <input
@@ -18,6 +20,7 @@
                     required>
                 <lax-error errors="ctrl.errors.name"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">Surface</span>
                 <select
@@ -26,6 +29,7 @@
                     ng-options="opt.value as opt.label for opt in ctrl.surfaces"></select>
                 <lax-error errors="ctrl.errors.surface"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">Style</span>
                 <select
@@ -34,6 +38,7 @@
                     ng-options="opt.value as opt.label for opt in ctrl.styles"></select>
                 <lax-error errors="ctrl.errors.style"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">Address</span>
                 <input
@@ -42,6 +47,7 @@
                     ng-model="ctrl.model.address1">
                 <lax-error errors="ctrl.errors.address1"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">City</span>
                 <input
@@ -51,6 +57,7 @@
                     ng-required>
                 <lax-error errors="ctrl.errors.city"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">State</span>
                 <select
@@ -60,6 +67,7 @@
                     ng-required></select>
                 <lax-error errors="ctrl.errors.region"></lax-error>
             </label>
+            
             <label class="item item-input">
                 <span class="input-label">ZIP Code</span>
                 <input
@@ -68,12 +76,14 @@
                     ng-model="ctrl.model.postalCode">
                 <lax-error errors="ctrl.errors.postalCode"></lax-error>
             </label>
+            
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Directions</span>
                 <textarea id="directions" 
                           ng-model="ctrl.model.directions"></textarea>
                 <lax-error errors="ctrl.errors.directions"></lax-error>
             </label>
+            
             <div class="padding">
                 <button type="button"
                         class="button button-block button-positive"
