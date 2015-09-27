@@ -1,5 +1,9 @@
-class CsrfProvider {
-    constructor() {
+let self;
+
+class CsrfInterceptor {
+    constructor($cookies) {
+        self = this;
+        this.$cookies = $cookies;
         this.headerName = 'X-XSRF-TOKEN';
         this.cookieName = 'XSRF-TOKEN';
         this.allowedMethods = ['GET'];
@@ -20,21 +24,20 @@ class CsrfProvider {
         this.allowedMethods = allowedMethods;
     }
     
-    $get($cookies) {
-        'ngInject';
-        return {
-            request: (config) => {
-                if(this.allowedMethods.indeOf(config.method) !== -1) {
-                    config.headers[this.headerName] = $cookies[this.cookieName];
-                }
-                return config;
-            }
-        };
-    }
-    
-    static factory() {
-        return new CsrfProvider();
+    request(config) {
+        if(self.allowedMethods.indexOf(config.method) !== -1) {
+            config.headers[self.headerName] = self.$cookies[self.cookieName];
+        }
+        return config;
     }
 }
 
-export default CsrfProvider;
+class CsrfInterceptorProvider {
+    
+    $get($cookies) {
+        'ngInject';
+        return new CsrfInterceptor($cookies);
+    }
+}
+
+export default CsrfInterceptorProvider;

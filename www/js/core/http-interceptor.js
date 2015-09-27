@@ -1,6 +1,6 @@
 let self;
 
-class HttpInterceptorProvider {
+class HttpInterceptor {
     constructor(SessionService) {
         self = this;
         this.SessionService = SessionService;
@@ -18,11 +18,13 @@ class HttpInterceptorProvider {
         }
         return config;
     }
+}
+
+class HttpInterceptorProvider {
     
-    static factory(SessionService) {
+    $get(SessionService) {
         'ngInject';
-        
-        return new HttpInterceptorProvider(SessionService);
+        return new HttpInterceptor(SessionService);
     }
 }
 

@@ -1,5 +1,3 @@
-'useStrict';
-
 class SessionService {
     constructor() {
         // Noop
