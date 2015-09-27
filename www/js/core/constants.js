@@ -1,8 +1,13 @@
-// The name of this application
+// The name of this application.
 export const APP_NAME = 'laxstats';
 
-// An empty HTML template that yields to everything
+// An empty HTML template that yields to everything.
 export const ABSTRACT_TEMPLATE = '<ion-nav-view></ion-nav-view>';
+
+export const REGEX_ISO8601 = /^(\d{4}|\+\d{6})(?:-(\d{2})(?:-(\d{2})(?:T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?)?)?)?$/;
+
+// The date format to display a moment date object.
+export const MOMENT_DATE_FORMAT = 'YYYY-MM-DD';
 
 // Regions
 export const REGIONS = [

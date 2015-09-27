@@ -18,7 +18,7 @@ module.exports = {
             ],
             browserifyOptions: {
                 debug: true,
-                require: ['jquery', 'underscore']
+                require: ['jquery', 'underscore', 'moment']
             }
         },
         src: ['<%= config.source %>/app.js'],
