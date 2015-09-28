@@ -1,0 +1,52 @@
+<ion-view view-title="{{ctrl.model.name || 'New Season'}}">
+    <ion-content>
+        <form
+            name="seasonForm"
+            class="list"
+            role="form">
+        
+            <input
+                type="hidden"
+                id="id"
+                ng-model="ctrl.model.id" />
+        
+            <label class="item item-input">
+                <span class="input-label">Description</span>
+                <input
+                    type="text"
+                    id="description"
+                    ng-model="ctrl.model.description"
+                    placeholder="New Season"
+                    ng-required />
+                <lax-error errors="ctrl.errors.description"></lax-error>
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Starts On</span>
+                <input 
+                    type="date"
+                    id="startsOn"
+                    ng-model="ctrl.model.startsOn"
+                    ng-required />
+                <lax-error errors="ctrl.errors.startsOn"></lax-error>
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Ends On</span>
+                <input 
+                    type="date"
+                    id="endsOn"
+                    ng-model="ctrl.model.endsOn" />
+                <lax-error errors="ctrl.errors.endsOn"></lax-error>
+            </label>
+            
+            <div class="padding">
+                <button type="button"
+                        class="button button-block button-positive"
+                        ng-click="ctrl.saveOrUpdate()">
+                    {{ctrl.btnText()}}
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

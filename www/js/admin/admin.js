@@ -47,6 +47,7 @@ class AdminHomeController {
 export default angular
     .module('laxstats.admin', [
         'ngResource',
+        require('./seasons').name,
         require('./sites').name,
         require('./violations').name
     ])
