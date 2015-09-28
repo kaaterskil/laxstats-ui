@@ -15,7 +15,7 @@ describe('DateDescriptor', function () {
     }));
     
     it('transforms string properties to Date properties', function () {
-        var result = descriptor.fromString(strObject);
+        var result = descriptor.parseObject(strObject);
         expect(result.myDate instanceof Date).toBe(true);
     });
     
