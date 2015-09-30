@@ -29,7 +29,7 @@ class SeasonsController {
     
     remove(item) {
         item.$delete({id: item.id}, this.removeSuccess, this.removeError);
-        this.collection.splice(this.seasons.indexOf(item), 1);
+        this.collection.splice(this.collection.indexOf(item), 1);
     }
     
     removeSuccess(data, headers){}
