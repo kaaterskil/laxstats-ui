@@ -49,6 +49,7 @@ export default angular
         'ngResource',
         require('./seasons').name,
         require('./sites').name,
+        require('./teams').name,
         require('./violations').name
     ])
     .config(adminConfig)

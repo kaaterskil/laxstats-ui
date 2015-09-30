@@ -8,6 +8,7 @@ export const ROUTES = {
         home: 'admin/home',
         seasons: 'admin/seasons',
         sites: 'admin/sites',
+        teams: 'admin/teams',
         violations: 'admin/violations'
     }
 };
@@ -23,6 +24,7 @@ export const API = {
     admin: {
         seasons: 'api/seasons',
         sites: 'api/sites',
+        teams: 'api/teams',
         violations: 'api/violations'
     }
 };

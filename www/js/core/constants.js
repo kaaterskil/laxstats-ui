@@ -101,3 +101,18 @@ export const VIOLATION_PENALTIES = [
     {label: 'Award of ball', value: 'AWARD'},
     {label: 'Ejection', value: 'EJECTION'}
 ];
+
+export const TEAM_GENDER = [
+    {label: 'Men', value: 'MEN'},
+    {label: 'Women', value: 'WOMEN'},
+    {label: 'Boys', value: 'BOYS'},
+    {label: 'Girls', value: 'GIRLS'}
+];
+
+export const LETTER = [
+    {label: 'Varsity', value: 'VARSITY'},
+    {label: 'Junior Varsity', value: 'JV'},
+    {label: 'Freshman', value: 'FRESHMAN'},
+    {label: 'Club', value: 'CLUB'},
+    {label: 'Youth', value: 'YOUTH'}
+];
