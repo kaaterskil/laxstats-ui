@@ -18,7 +18,6 @@ class LoginController {
     }
     
     login() {
-        console.log('login called');
         this.AuthService.authenticate(this.credentials);
         if(this.AuthService.authenticated) {
             this.message = 'Login succeeded';
