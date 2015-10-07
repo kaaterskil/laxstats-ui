@@ -1,19 +1,17 @@
-<ion-view view-title="Teams">
+<ion-view view-title="Team Seasons">
     <ion-nav-buttons side="left">
         <button class="button button-icon icon ion-navicon" 
                 menu-toggle="left"></button>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
         <button class="button button-clear" 
-                ui-sref="admin.teams.new">New</button>
+                ui-sref="admin.teamSeasons.new">New</button>
     </ion-nav-buttons>
     
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="item in ctrl.collection | orderBy: 'name'" item="item">
+            <ion-item ng-repeat="item in ctrl.collection | orderBy: 'season.startsOn'" item="item">
                 {{item.name}}
-                <ion-option-button class="button-balanced" 
-                                   ng-click="ctrl.seasons(item)">Seasons</ion-option-button>
                 <ion-option-button class="button-energized" 
                                    ng-click="ctrl.edit(item)">Edit</ion-option-button>
                 <ion-option-button class="button-assertive" 

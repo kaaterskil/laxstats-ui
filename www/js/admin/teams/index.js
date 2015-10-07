@@ -23,6 +23,10 @@ class TeamsController {
         angular.extend(this, {$state, collection});
     }
     
+    seasons(item) {
+        this.$state.go('admin.teams.seasons.index', {teamId: item.id});
+    }
+    
     edit(item) {
         this.$state.go('admin.teams.edit', {id: item.id});
     }

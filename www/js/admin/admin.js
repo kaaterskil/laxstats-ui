@@ -50,6 +50,7 @@ export default angular
         require('./seasons').name,
         require('./sites').name,
         require('./teams').name,
+        require('./team-seasons').name,
         require('./violations').name
     ])
     .config(adminConfig)

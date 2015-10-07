@@ -8,6 +8,7 @@ import DateInterceptorProvider from './date-interceptor';
 import DateDescriptorProvider from './date-descriptor';
 
 require('angular-cookies');
+require('./active-record/index');
 require('./error/index');
 
 function coreConfig($provide, $httpProvider, DateDescriptorProvider) {
@@ -29,6 +30,7 @@ function coreConfig($provide, $httpProvider, DateDescriptorProvider) {
 export default require('angular')
     .module('laxstats.core', [
         'ngCookies',
+        'active-record',
         'laxstats.core.error'
     ])
     .provider('CsrfInterceptor', CsrfInterceptorProvider)

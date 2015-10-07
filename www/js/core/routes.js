@@ -25,6 +25,7 @@ export const API = {
         seasons: 'api/seasons',
         sites: 'api/sites',
         teams: 'api/teams',
+        teamSeasons: 'api/teams/:teamId/seasons',
         violations: 'api/violations'
     }
 };
